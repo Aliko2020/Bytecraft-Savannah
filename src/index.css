@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: #2d0c07;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app{
+  display: flex;
+  flex-direction: column;
+}
