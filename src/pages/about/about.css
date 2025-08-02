@@ -1,0 +1,28 @@
+.about-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 4px 32px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  flex-wrap: wrap;
+  max-width: 1056px;
+}
+.about-header{
+    height: 300px;
+    max-width: 1056px;
+    background-image: url("/src/assets/about.png");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.about-container p{
+  margin-bottom: 16px;
+}

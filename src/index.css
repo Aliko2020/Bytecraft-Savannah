@@ -2,21 +2,35 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  line-height: 1.6;
 }
 
 body{
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-  color: #2d0c07;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #191919;
+  color: gray;
+}
+
+h3{
+  font-weight: 600;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+.app main {
+  flex: 1;
 }
 
 a {
+  color: gray;
   text-decoration: none;
-  color: inherit;
+  transition: color 0.3s ease;
 }
 
-.app{
-  display: flex;
-  flex-direction: column;
+a:hover {
+  color: #d2620e;
 }

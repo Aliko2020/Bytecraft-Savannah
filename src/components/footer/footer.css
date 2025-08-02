@@ -1,0 +1,93 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #101010;
+    color: gray;
+}
+
+.container {
+    max-width: 1056px;
+    width: 100%;
+    padding: 32px 16px;
+    font-weight: 200;
+}
+
+.top-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.top-container ul {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.top-container li{
+    cursor: pointer;
+}
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 16px;
+}
+
+.button-container img{
+    max-width: 120px;
+}
+
+.subscribe {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0 32px 0;
+    flex-wrap: wrap;
+}
+
+.subscribe-form input {
+    padding: 8px 12px;
+    border: 1px solid #f1efef;
+    border-radius: 4px;
+    min-width: 220px;
+    font-size: 14px;
+    outline: none;
+}
+
+.subscribe-form button {
+    padding: 8px 16px;
+    background-color: #c7eee0;
+    border: none;
+    border-radius: 4px;
+    color: rgb(139, 135, 135);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.subscribe-form button:hover {
+    background-color: #daf0e8;
+}
+
+@media (max-width: 768px) {
+  .top-container {
+    justify-content: space-around;
+    gap: 0;
+}
+}
+

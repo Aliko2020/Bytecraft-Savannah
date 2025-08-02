@@ -1,9 +1,9 @@
-import "./navbar.css"
-import { CiInstagram } from "react-icons/ci";
-import { FaWhatsapp} from "react-icons/fa";
+import "./navbar.css";
+import { Link } from "react-router-dom";
 import { RxCross1 } from "react-icons/rx";
 import { CiMenuFries } from "react-icons/ci";
-import Bytelogo from "../../assets/Bytelogo3.jpeg"
+import { FaWhatsapp } from "react-icons/fa";
+import logo from "../../assets/bytecraftlogo.png";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -19,40 +19,51 @@ const Navbar = () => {
 
   return (
     <nav className="nav-container">
-      <span className="logo">
-        <span className="B">B</span>yteCraft{" "}
-        <span>
-          <span className="B">S</span>avannah
-        </span>
-      </span>
+      <Link 
+        className="logo-container"
+        to="/"
+      >
+        <img
+          src={logo}
+          alt="Logo image of ByteCraft Savannah"
+          className="logo-image"
+        />
+        <span>ByteCraft</span>
+      </Link>
 
       {/* Hamburger for mobile */}
       <div className="hamburger" onClick={toggleMenu}>
-        {mobileOpen ? <RxCross1 color="#b4724a" size={24} /> : <CiMenuFries color="#b4724a" size={24} />}
+        {mobileOpen ? (
+          <RxCross1 color="#b4724a" size={24} />
+        ) : (
+          <CiMenuFries color="#b4724a" size={24} />
+        )}
       </div>
 
       <ul className={`links nav-links ${mobileOpen ? "active" : ""}`}>
-        <li onClick={closeMenu}>Home</li>
-        <li onClick={closeMenu}>About</li>
-        <li onClick={closeMenu}>Contact</li>
-        <li
-          className={`dropdown ${dropdownOpen ? "open" : ""}`}
-          onClick={handleDropdownClick}
-        >
-          Services
-          <ul className="dropdown-menu">
-            <li onClick={closeMenu}>Laptops</li>
-            <li onClick={closeMenu}>Training</li>
-            <li onClick={closeMenu}>Support</li>
-          </ul>
+        <li onClick={closeMenu}>
+          <Link to="/about">About</Link>
         </li>
-        <li>Blog</li>
+        <li onClick={closeMenu}>
+          <Link to="/contact">Contact</Link>
+        </li>
+
+        <li onClick={closeMenu}>
+          <Link to="/services">Services</Link>
+        </li>
+
+        <li><Link to="/blog">Blog</Link></li>
       </ul>
 
       <ul className={`links social-links ${mobileOpen ? "active" : ""}`}>
         <li>
-          <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
-            <FaWhatsapp size={20} color="gray" /> Chat
+          <FaWhatsapp size={25} />
+          <a
+            href="https://wa.me/1234567890"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Chat
           </a>
         </li>
       </ul>

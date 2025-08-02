@@ -5,12 +5,12 @@ export default function MainLayout({ children }) {
   return (
     <div className="app">
       <Navbar />
-      
-      <main className="">
+
+      <main className="main-content">
         {children}
       </main>
-      
-      {/* <Footer /> */}
+
+      <Footer />
     </div>
   )
 }
